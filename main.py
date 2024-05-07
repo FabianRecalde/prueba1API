@@ -89,7 +89,7 @@ def UsersNotRecommend(year: str):
 @app.get("/sentiment_analysis/{year}")
 def sentiment_analysis(year: str):
     # Filtrar las reseñas del año especificado
-    reviews = sentiment_counts_sorted[sentiment_counts_sorted['year'] == int(year)]
+    reviews = sentiment_counts_sorted[sentiment_counts_sorted['year'] == (year)]
     
     # Crear un diccionario con valores predeterminados
     sentiment_dict = {'Negative': 0, 'Neutral': 0, 'Positive': 0}
